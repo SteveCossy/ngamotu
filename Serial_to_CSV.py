@@ -5,6 +5,8 @@
 # CSV function based on  https://github.com/SteveCossy/IOT/blob/master/LoRaReAd/MQTTUtils.py#L58
 
 import datetime, time, serial, logging, os, csv
+import paho.mqtt.client as mqtt
+import json
 
 # Constants for CSV handling
 CSVPath     = '/home/pi/ngamotu'
@@ -13,6 +15,11 @@ CSVFileBase = 'ngamotu_sensors_'
 CrLf        = '\r\n'
 FIELDNAMES  = ['time','channel','data']
 
+# MQTT Params
+MQTT_BROKER = 'penguin.econode.nz'
+MQTT_PORT = 2883
+MQTT_USER = 'penguin'
+MQTT_PASSWORD = 'penguin2023'
 
 # Default location of serial port on pre 3 Pi models
 #SERIAL_PORT =  "/dev/ttyAMA0"
@@ -25,6 +32,11 @@ SERIAL_PORT =   "/dev/ttyS0"
 
 #This sets up the serial port specified above. baud rate and WAITS for any cr/lf (new blob of data from picaxe)
 port = serial.Serial(SERIAL_PORT, baudrate=2400)
+
+#Connect to MQTT
+client = mqtt.Client()
+client.username_pw_set(MQTT_USER,MQTT_PASSWORD)
+client.connect(MQTT_BROKER,MQTT_PORT)
 
 qos = 10
 timestamp = time.time()
@@ -62,6 +74,8 @@ while True:
                   'data':data
                   }
       print ( 'Save2CSV', DATALIST )
+      json_data = json.dumps( DATALIST, separators=(',', ':') )
+      client.publish('penguin/gusto-raw/'+channel, json_data )
 
       if not os.path.isfile(CSVPathFile):
       # There is not currently an output file
