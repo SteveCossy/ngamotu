@@ -33,7 +33,7 @@ The filenames above identify the site, then the channel number, as received from
 | 19 |       | 18   |        |
 | 20 | 3     |      | mVolts |
 | 30 | RFID Status      |      | (Very good question) |
-| 31 | | | RFID |
+| 31 | | 6 | RFID |
 | 32 | | | RFID |
 | 33 | | 10 | RFID |
 
