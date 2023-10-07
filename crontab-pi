@@ -21,7 +21,7 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 #
 # m h  dom mon dow   command
-@reboot /bin/sleep 60 ;  python /home/pi/ngamotu/Serial_to_CSV.py
+@reboot /bin/sleep 60 ; /usr/bin/screen -dmS serial-to-csv python /home/pi/ngamotu/Serial_to_CSV.py
 # 49 * * * *  python /home/pi/ngamotu/Serial_to_CSV.py # Test run
 */10 * * * * /home/pi/ngamotu/CSV-GIT.sh
 
