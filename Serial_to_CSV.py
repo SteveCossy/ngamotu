@@ -44,7 +44,7 @@ timestamp = time.time()
 while True:
   try:
     rcv = port.readline() #read buffer until cr/lf
-    print("Serial Readline Data = " + rcv)
+    # print("Serial Readline Data = " + rcv)
     rcv = rcv.rstrip("\r\n")
     synch,node,channel,data,cs = rcv.split(",")
     print("rcv.split Data = : " + node + " " + channel + " " + data + " " + cs)
