@@ -91,7 +91,7 @@ while True:
 
 
 
-    if (time.time() > timestamp + 60):
+    if (time.time() > timestamp + 600):
       timestamp = time.time()
       channel   = 25
       data      = qos
