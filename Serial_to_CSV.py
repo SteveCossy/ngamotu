@@ -37,7 +37,7 @@ port = serial.Serial(SERIAL_PORT, baudrate=2400)
 client = mqtt.Client()
 client.username_pw_set(MQTT_USER,MQTT_PASSWORD)
 client.connect(MQTT_BROKER,MQTT_PORT)
-
+client.loop_start()
 qos = 10
 timestamp = time.time()
 
