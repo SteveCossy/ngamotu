@@ -32,7 +32,11 @@ The filenames above identify the site, then the channel number, as received from
 | 18 |       | 15   |        |
 | 19 |       | 18   |        |
 | 20 | 3     |      | mVolts |
-| 30 | RFID Status      |      | (Very good question) |
+| 23 | | | QOS, Good Packets ASK data (nbr pver 5 minutes) |
+| 24 | | | QOS, Bad Packets |
+| 25 | | | QOS, Good Packets Serial interface |
+| 26 | | Battery Voltage | mV |
+| 30 | RFID Status      |      | 3 digits is charging rate, 4 digits RFID tuning, 5 digits = mlvots of 12V battery |
 | 31 | | 6 | RFID |
 | 32 | | | RFID |
 | 33 | | 10 | RFID |
