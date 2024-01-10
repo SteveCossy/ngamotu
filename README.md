@@ -10,36 +10,45 @@ The filenames above identify the site, then the channel number, as received from
 * Click on a file name to download all the data for a channel.  This can be downloaded or copied and pasted into a spreadsheet.
 * Click on any date and time and you can look at **all** the data uploaded over the hour leading up to that time.  
 ## Channel Numbers
-| Ch | Mound | Nest | Unit   |
-| -- | ----- | ---- | ------ |
-| 1  |       |      |        |
-| 2  |       | 14   |        |
-| 3  |       | 9    |        |
-| 4  |       | 8    |        |
-| 5  | 2     |      | mVolts |
-| 6  |       | 20   |        |
-| 7  |       | 21   |        |
-| 8  |       | 19   |        |
-| 9  |       | 11   |        |
-| 10 | 4     |      | mVolts |
-| 11 |       | 7    |        |
-| 12 |       | 6    |        |
-| 13 |       | 5    |        |
-| 14 |       | 4    |        |
-| 15 | 1     |      | mVolts |
-| 16 |       | 10   |        |
-| 17 |       | 16   |        |
-| 18 |       | 15   |        |
-| 19 |       | 18   |        |
-| 20 | 3     |      | mVolts |
-| 23 | | | QOS, Good Packets ASK data (nbr pver 5 minutes) |
-| 24 | | | QOS, Bad Packets |
-| 25 | | | QOS, Good Packets Serial interface |
-| 26 | | Battery Voltage | mV |
-| 30 | RFID Status      |      | 3 digits is charging rate, 4 digits RFID tuning, 5 digits = mlvots of 12V battery |
-| 31 | | 6 | RFID |
-| 32 | | | RFID |
-| 33 | | 10 | RFID |
+| Ch | Device | Mound | Nest | Unit   | Notes |
+| -- | ----- | ----- | ---- | ------ | ------ |
+| 1  | test  |       |      |        | |
+| 2  | test  |       |    |        | |
+| 2  |       |       | 14   |        | |
+| 3  |       |       | 9    |        | |
+| 4  |       |       | 8    |        | |
+| 5  |       | 2     |      | mVolts | |
+| 6  |       |       | 20   |        | |
+| 7  |       |       | 21   |        | |
+| 8  |       |       | 19   |        | |
+| 9  |       |       | 11   |        | |
+| 10 |       | 4     |      | mVolts | |
+| 11 |       |       | 7    |        | Sometimes fails checksum |
+| 12 |       |       | 6    |        | |
+| 13 |       |       | 5    |        | |
+| 14 |       |       | 4    |        | |
+| 15 |       | 1     |      | mVolts | |
+| 16 |       |       | 10   |        | |
+| 17 - 19 | test  |       |      |        | |
+| 17 |       |       | 16   |        | |
+| 18 |       |       | 15   |        | |
+| 19 |       |       | 18   |        | Always fails checksum |
+| 20 |       | 3     |      | mVolts | |
+| 20 - 25 | test  |       |      |        | |
+| 22 | test  |       |      |        | |
+| 23 |       | | | QOS | Good Packets ASK data (nbr pver 5 minutes) |
+| 24 |       | | | QOS | Bad Packets |
+| 25 |       | | | QOS | Good Packets Serial interface |
+| 26 |       | | Battery Voltage | mV | |
+| 27,28 | test  |       |      |        | Sometimes fails checksum |
+| 29 | test  |       | 16   |        | Always fails checksum |
+| 30 |       | RFID Status |      | | 3 digits is charging rate, 4 digits RFID tuning, 5 digits = mlvots of 12V battery |
+| 31 |       | | 6 | RFID | |
+| 32 |       | | | RFID | |
+| 33 |       | | 10 | RFID | Last entry 2024-01-09T15:29 |
+| 34 |       | | 10 | RFID | Only entry 2024-01-08T11:13 |
+| 51-55 | test |       |      |        | |
+| 17 |       |       | 16   |        | |
 
 ## Technical Description
 |  |  |
