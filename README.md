@@ -42,7 +42,7 @@ The filenames above identify the site, then the channel number, as received from
 | 26 |       | | Battery Voltage | mV | |
 | 27,28 | test  |       |      |        | Sometimes fails checksum |
 | 29 | test  |       | 16   |        | Always fails checksum |
-| 30 |       | RFID Status |      | | 3 digits is charging rate, 4 digits RFID tuning, 5 digits = mlvots of 12V battery |
+| 30 |       | RFID Status |      | | 3 digits is charging rate, 4 digits RFID tuning, 5 digits = mlvots of 12V battery <br> Example output: 1111, 543, 13503 |
 | 31 |       | | 6 | RFID | |
 | 32 |       | | | RFID | |
 | 33 |       | | 10 | RFID | Last entry 2024-01-09T15:29 |
