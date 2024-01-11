@@ -48,7 +48,7 @@ The filenames above identify the site, then the channel number, as received from
 | 33 |       | | 10 | RFID | Last entry 2024-01-09T15:29 |
 | 34 |       | | 10 | RFID | Only entry 2024-01-08T11:13 |
 | 51-55 | test |       |      |        | |
-| 17 |       |       | 16   |        | |
+| 132 |       |       | 16   | RFID? | values registered: 86 94 47 16443 32859 |
 
 ## Technical Description
 |  |  |
